@@ -23,8 +23,8 @@ const ChatApp = () => {
   const [audioArr, setAudioArr] = useState([]);
   const [displaymsg, setDisplayMsg] = useState([]);
   const [like, setLike] = useState(0);
-  
 
+// to store the audios
   useEffect(() => {
     const storedAudioArr =
       JSON.parse(localStorage.getItem("recordedAudio")) || [];
@@ -48,6 +48,8 @@ const ChatApp = () => {
   
   };
 
+// for emoji handling
+
   function onEmojiClick(emojiData, event) {
     setSelectedEmoji(emojiData.unified);
     setShowInputField(true);
@@ -57,17 +59,22 @@ const ChatApp = () => {
     );
   }
 
+  // this is to fetch the data
+
   useEffect(() => {
     axios
       .get(`https://lovely-tux-eel.cyclic.app/chat`)
       .then(function (response) {
         setDisplayMsg(response.data);
         
+       
       })
       .catch(function (error) {
         console.log("Error:", error.message);
       });
   }, []);
+
+//  this function is to post the message
 
   const sendPostRequest = () => {
     const data = {
@@ -88,7 +95,7 @@ const ChatApp = () => {
       });
   };
 
-
+//  this function is to increase the like count
   const handleLike = (id) => {
     axios
       .patch(`https://lovely-tux-eel.cyclic.app/chat/like/${id}`, { $inc: { like: 1 } })
@@ -105,6 +112,8 @@ const ChatApp = () => {
       });
   };
 
+// this is to clear the entire chat
+
   const ClearAll=()=>{
       axios.delete(`https://lovely-tux-eel.cyclic.app/chat/clear`)
       .then(function (response) {
@@ -117,6 +126,8 @@ const ChatApp = () => {
       });
 
   }
+
+// this is to clear particular message
 
   const deleteMsg=(id)=>{
     console.log(id);
@@ -131,6 +142,7 @@ const ChatApp = () => {
 
 }
 
+   
 
   return (
     <div>
@@ -141,15 +153,15 @@ const ChatApp = () => {
               <img src="https://png.pngtree.com/element_our/png_detail/20181229/vector-chat-icon-png_302635.jpg" alt="" />
             </div>
             <div>
-              <div  style={{ marginLeft: "40px" }}>Exact Space Chat App</div>
+              <div  style={{ marginLeft: "60px",textAlign:"left", marginTop: "1px" ,color:"#2d66c1",fontWeight:"bold"}}>Exact Space Chat App</div>
               <div>
-                <p style={{ marginLeft: "60px", marginTop: "5px" }}>
+                <p style={{ marginLeft: "60px", marginTop: "7px",textAlign:"left" }}>
                  
                   Group Members: Alan , Bob , Carol , Dean , Eril
                 </p>
               </div>
             </div>
-            <button  style={{height:"30px",marginLeft:"350px",marginTop:"15px"}} onClick={ClearAll}>Clear Chat <MdDelete/></button>
+            <button  style={{height:"30px",marginLeft:"350px",marginTop:"15px", color:"white",border:"1px solid white", cursor: "pointer",backgroundColor:"rgb(198, 41, 41)"}} onClick={ClearAll}>Clear Chat <MdDelete /></button>
           </div>
         </div>
       
@@ -161,16 +173,26 @@ const ChatApp = () => {
                 ? "message-blue"
                 : "message-orange";
 
+                const firstLetter = el.user[0];
+
               return (
                 <>
+                <div>
+               
                   <div style={{ display: "flex", border: "0px solid black" }}>
+                   
                     <div className={messageClass} key={el._id}>
+                    <div className="first-letter" style={{fontSize:"22px",color:"white",border:"0px solid black",height:"38px",
+                    width:"50px",paddingTop:"10px",textAlign:"center",borderRadius:"50%",fontWeight:"bold",marginLeft:"-80px",backgroundColor:"#8f2841"}}>{firstLetter}</div>
+                 
                       <div
                         style={{
                           display: "flex",
                           justifyContent: "space-between",
+                          marginTop:"-50px"
                         }}
-                      >
+                      > 
+                    
                         <p style={{ color: "red" }}>{el.user}</p>
                         <p className="sent-time">{el.time}</p>
                       </div>
@@ -181,7 +203,7 @@ const ChatApp = () => {
                             <div style= {{display: "flex",gap:"20px"
                           }}> 
                             {/* <div style={{marginTop:"3px"}}><BiSolidCommentEdit onClick={()=>editMsg(el._id)} size={"20px"}  /></div> */}
-                            <div><MdDelete onClick={()=>deleteMsg(el._id)} size={"20px"}/></div>
+                            <div><MdDelete className="icon" onClick={()=>deleteMsg(el._id)} size={"20px"}/></div>
                             </div>
                         
                         <div
@@ -201,6 +223,8 @@ const ChatApp = () => {
                    
                     </div>
                   </div>
+                </div>
+                 
                 </>
               );
             })}

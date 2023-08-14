@@ -1,10 +1,9 @@
- .App {
+ .background {
   text-align: center;
   background-image: url('https://images.unsplash.com/photo-1611589228950-d9af9a84b0b2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80');
   background-repeat: no-repeat;
   background-size: cover;
-  height: 85vh;
-  width: 100vw; 
+ height: 87vh; 
   padding: 50px;
-  
+ overflow-x: hidden;
 } 

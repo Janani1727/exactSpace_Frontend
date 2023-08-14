@@ -2,13 +2,14 @@
    border:4px solid black;
    border-bottom: 1px solid black;
    height: 475px;
-   width:61%;
+   width:66%;
    margin: auto;
+   margin-top: 40px;
    background-color:whitesmoke;
    
 }
 .sub1{
-   border:2px solid black;
+   border:0px solid black;
    height: 61px;
    width:100%;
    position: sticky;
@@ -17,14 +18,15 @@
 
 .sendtext{
    border:4px solid black;
-   border-top: 1px solid black;
+   border-top: 0px solid black;
    height: 50px;
    width:936px;
    display: flex;
    gap: 30px;
    position: absolute;
-   margin-left: 296px;
+   margin-left: 236px;
    background-color: white;
+
 }
 input{
    height: 44px;
@@ -44,12 +46,14 @@ h1{
 }
 
 .send{
-   width: 20px;
-   height: 20px;
+   width: 25px;
+   height: 25px;
    border-radius: 50%;
    padding: 10px;
-   border: 1px solid black;
+  margin-left: -10px;
+  margin-top: 3px;
    background-color: white;
+   cursor: pointer;
 }
 
 
@@ -91,7 +95,7 @@ h1{
    font: 400 .9em 'Open Sans', sans-serif;
    border: 1px solid #97C6E3;
    border-radius: 10px;
-   margin-left: 680px;
+   margin-left: 600px;
 }
  
 
@@ -150,7 +154,7 @@ h1{
    position: relative;
    margin-bottom: 10px;
    /* margin-left: calc(100% - 240px); */
-   margin-left: 30px;
+   margin-left: 80px;
    padding: 10px;
    background-color: #f8e896;
    width: 250px;
@@ -170,6 +174,7 @@ h1{
    overflow-y: auto;
    overflow-x: hidden;
    text-align:justify;
+   background-image: url('https://i.pinimg.com/222x/e9/fe/75/e9fe75e1cd4e90bf373c58ea52b37698.jpg');
   }
 
 
@@ -265,11 +270,13 @@ h1{
 
 .sent-time{
    text-align: right;
+   cursor: pointer;
 }
 
 .icon {
   
    transition: transform 0.10s ease; 
+   cursor: pointer;
  }
  
  .icon:hover {
@@ -279,4 +286,8 @@ h1{
  .smiley{
    color: rgb(255, 217, 0);
    background-color: black;
+   cursor: pointer;
  }
+
+ 
+ 
