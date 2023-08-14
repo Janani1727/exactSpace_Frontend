@@ -183,20 +183,20 @@ const ChatApp = () => {
                    
                     <div className={messageClass} key={el._id}>
                     <div className="first-letter" style={{fontSize:"22px",color:"white",border:"0px solid black",height:"38px",
-                    width:"50px",paddingTop:"10px",textAlign:"center",borderRadius:"50%",fontWeight:"bold",marginLeft:"-80px",backgroundColor:"#8f2841"}}>{firstLetter}</div>
+                    width:"44px",paddingTop:"12px",textAlign:"center",borderRadius:"50%",fontWeight:"bold",marginLeft:"-80px",backgroundColor:"#8f2841"}}>{firstLetter}</div>
                  
                       <div
                         style={{
                           display: "flex",
                           justifyContent: "space-between",
-                          marginTop:"-50px"
+                          marginTop:"-45px"
                         }}
                       > 
                     
                         <p style={{ color: "red" }}>{el.user}</p>
                         <p className="sent-time">{el.time}</p>
                       </div>
-                      <p>{el.message}</p>
+                      <p style={{marginTop:"10px",marginBottom:"15px"}}>{el.message}</p>
 
                       <div style= {{display: "flex",
                           justifyContent: "space-between"}}>
@@ -240,7 +240,7 @@ const ChatApp = () => {
       <div className="sendtext">
         <div className="emoji">
           <BsEmojiSmileFill
-            size={"50px"}
+            size={"48px"}
             className="smiley"
             
             onMouseEnter={() => setIsEmojiPickerOpen(true)}
