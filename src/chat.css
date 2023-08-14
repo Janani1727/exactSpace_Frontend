@@ -52,24 +52,15 @@ h1{
    background-color: white;
 }
 
-/* .mic{
-   width: 30px;
-   height: 40px;
-   border-radius: 50%;
-   /* padding: 10px; */
-   /* border: 1px solid black; */
-   /* background-color: white;
-   margin-left: -100px; */
-/* } */ */
 
 .emoji {
-   position: relative; /* Make the parent container of the emoji picker relative */
+   position: relative; 
  }
  
  .emoji-picker-container {
    position: absolute;
-   left: 300px; /* Adjust this value to control the distance from the left edge */
-   margin-top:-450px; /* Adjust this value to control the vertical position */
+   left: 300px; 
+   margin-top:-450px; 
    z-index: 2;
    height: 300px;
    padding: 5px;
@@ -103,10 +94,6 @@ h1{
    margin-left: 680px;
 }
  
-/* .message-orange >button{
-margin-left: 130px;
-margin-top: -100px;
-} */
 
 .message-blue:after {
    content: '';
@@ -186,11 +173,9 @@ margin-top: -100px;
   }
 
 
-/* ------------------------------ */
 
 
 
-/* Style the audio recorder container */
 .audio-recorder-container {
    display: flex;
    flex-direction: column;
@@ -200,19 +185,17 @@ margin-top: -100px;
    
  }
  
- /* Style the recorded audio container */
  .recorded-audio-container {
    display: flex;
    flex-direction: column;
    align-items: center;
  }
  
- /* Style the recorded audio player */
+
  .recorded-audio-player {
    margin-top: 10px;
  }
  
- /* Style the microphone button in the audio recorder */
  .microphone-button {
    background-color: #3498db;
    color: white;
@@ -225,14 +208,12 @@ margin-top: -100px;
    margin-bottom: 10px;
  }
  
- /* Style the recorded audio player controls */
  .microphone {
    width: 100%;
    margin-top: 5px;
    
  }
  
- /* Style the audio controls */
  .microphone-controls {
    display: flex;
    justify-content: center;
@@ -240,18 +221,15 @@ margin-top: -100px;
    margin-top: 5px;
  }
  
- /* Style the audio control buttons */
  .microphone-controls button {
    background-color: #3498db;
    color: white;
    border: none;
    border-radius: 5px;
-   /* padding: 5px 10px; */
-   /* margin: 0 5px; */
+ 
    cursor: pointer;
  }
  
- /* Style the audio control buttons on hover */
  .microphone-controls button:hover {
    background-color: #2980b9;
  }
@@ -261,7 +239,6 @@ margin-top: -100px;
    align-items: center;
  }
  
- /* Style each recorded audio player */
  .recorded-audio-player {
    display: flex;
    flex-direction: column;
@@ -269,13 +246,11 @@ margin-top: -100px;
    margin: 10px 0;
  }
 
- /* Custom CSS */
 .custom-send-icon {
-   /* Add your custom icon or background image here */
-   /* For example, you can use a background image, a font icon, or an SVG */
+
    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMT9vgc3HrHBiGn3Ez6Ddo4oceEpf675yNm6etM60ye26epKDBBZxoB_NXRDS9PIvqGOY&usqp=CAU');
    background-size: cover;
-   /* Add any other styling you need */
+   
  }
  
  .fixing{
@@ -285,42 +260,20 @@ margin-top: -100px;
    margin-left: 550px;
    
  }
-/* 
- .fixing:after {
-   content: '';
-   position: absolute;
-   width: 0;
-   height: 0;
-   border-bottom: 15px solid #f8e896;
-   border-left: 15px solid transparent;
-   border-right: 15px solid transparent;
-   bottom: 0;
-   right: -15px;
-}
 
-.fixing:before {
-   content: '';
-   position: absolute;
-   width: 0;
-   height: 0;
-   border-bottom: 17px solid #dfd087;
-   border-left: 16px solid transparent;
-   border-right: 16px solid transparent;
-   bottom: -1px;
-   right: -17px;
-} */
+
 
 .sent-time{
    text-align: right;
 }
 
 .icon {
-   /* Set initial size or other styles here */
-   transition: transform 0.10s ease; /* Add a smooth transition effect */
+  
+   transition: transform 0.10s ease; 
  }
  
  .icon:hover {
-   transform: scale(1.6); /* Zoom in by 20% */
+   transform: scale(1.6); 
  }
 
  .smiley{
